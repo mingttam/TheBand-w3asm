@@ -9,6 +9,10 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.clear {
+    clear: both;
+}
+
 #main {
     
 }
@@ -103,49 +107,7 @@ html {
     line-height: 38px;
 }
 
-/* SLider */
-
-/* #slider {
-    margin-top: 46px;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.img-slider {
-    position: relative;
-    left: 0;
-    right: 0;
-    width: 100%;    
-    animation: fade 9s infinite;
-}
-.img-slider img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover;   
-}
-
-.img-slider:nth-child(1) {
-    animation-delay: 0s;
-    z-index: 3;
-  }
-
-  .img-slider:nth-child(2) {
-    animation-delay: 3s;
-    z-index: 2;
-  }
-
-  .img-slider:nth-child(3) {
-    animation-delay: 6s;
-    z-index: 1;
-  }
-
-@keyframes fadeInOut {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; }
-  30%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
-} */
+/* <!-- slider --> */
 
 #slider {
     position: relative;
@@ -154,6 +116,7 @@ html {
     height: 100vh;
     overflow: hidden;
     margin-top: 46px;
+    object-fit: cover;
   }
   
   .img-slider {
@@ -211,14 +174,238 @@ html {
 .slider-desc {
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 47px;
     transform: translate(-50%, -50%);
     z-index: 5;
 }
 
+/* common content part */
 
 #content {
 
+}
+
+.content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 0 16px;
+}
+
+.section-heading,
+.section-subheading {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    
+}
+
+.section-subheading {
+    font: 15px;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: .6;
+}
+
+/* About */
+
+#content .about-text{
+    margin: 10px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+#content  .member-section {
+    text-align: center;
+    margin: 0 5%;
+    padding: 32px 0;
+  }
+  
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    /* height: 154px; */
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+/* Tour Dates */
+
+.tour-section {
+    background-color: #000;
+    padding-bottom: 32px;
+}
+
+.tour-section .section-heading, 
+.tour-section .section-subheading {
+    color: #fff;
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    background-color: #000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    float: right;
+    text-align: center;
+    line-height: 24px;
+}
+
+.places-list {
+    margin-top: 32px; 
+    margin-bottom: 48px;  
+}
+
+.place-item {
+    width: 33.33333%;
+}
+
+.place-item img {
+    width: 100%;
+    display: block;
+}
+
+.place-item img:hover {
+    opacity: 0.6;
+}
+
+.place-content {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;    
+    font-weight: 700;
+
+}
+
+.place-time {
+    margin-top: 15px;        
+    color: #757575;
+}
+.place-desc {
+    margin-top: 15px;   
+    line-height: 1.4;
+    
+}
+
+.place-buybtn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buybtn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.contact-content .form-submit {
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+}
+
+.contact-content .form-submit:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 #footer {
